@@ -1,0 +1,53 @@
+/* Hero.css */
+.hero-container {
+  text-align: center;
+  padding: 30px;
+  padding-top: 0px;
+}
+
+.headline h1 {
+  text-align: center;
+  color: black;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+
+.hero-content {
+  text-align: center;
+  margin: 20px;
+  color: black;
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.clients img {
+  max-width: 150px; /* Adjust image size as needed */
+  margin: 10px; /* Adjust spacing between images as needed */
+}
+
+@media screen and (min-width: 768px) {
+  .headline h1 {
+    font-size: 3.5em;
+    color: #063970;
+  }
+  .hero-image img{
+    max-width: 60vw;
+    height: auto;
+  }
+  .clients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    height: 20vh;
+  }
+  .clients img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,112 @@
+.testimonials-container {
+    padding: 40px 0;
+    text-align: center;
+    color: black;
+}
+  
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff; /* Set the text color to white */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    background: rgba(2, 17, 33, 0.5); 
+    padding: 10px; 
+    border-radius: 25px;
+    letter-spacing: 4px;
+  }
+  
+.testimonials-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-x: repeat(100%);
+}
+  
+.testimonial {
+    flex: 0 0 auto;
+    width: 80%;
+    padding: 20px;
+    margin: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    background:rgba(255, 255, 255, 0.3);
+}
+  
+.star-image {
+    
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+}
+  
+.name {
+    font-weight: bold;
+    margin: 0 0;
+}
+  
+.subject {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+  
+.message {
+    margin: 10px 0;
+}
+ 
+.testimonials-highlight {
+  background-image: url('../assets/testimonial.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.testimonials-container {
+  padding: 40px 0;
+  text-align: center;
+  color: black;
+  transform: translateX(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
+  will-change: transform;
+}
+
+.testimonials-container.invisible {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+
+.testimonials-container.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonials-container.exit {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
+}
+
+@media screen and (min-width: 768px ) and (max-width: 1024px) {
+  .star-image{
+    max-width: 20vw;
+  }
+}
+
+@media screen and (min-width: 1440px )  {
+  .star-image{
+    max-width: 20vw;
+  }
+}
+

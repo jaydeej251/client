@@ -1,0 +1,157 @@
+.homepage {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../assets/homebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.badge{
+  margin-left: 10vw;
+  padding-top: 20px;
+  width: 80vw;
+}
+.slider {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.598));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  position: inherit;
+  height: 50%;
+  overflow: hidden;
+  padding-right: 20px;
+}
+.slider h1{
+  padding-right: 15vw;
+}
+.slider p {
+  text-align: left;
+  padding: 0 10vw;
+  padding-right: 15vw;
+  margin-bottom: 20px;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 0px;
+  animation: slide 8s ease-in-out; 
+  opacity: 0;
+  transform: translateX(100%);
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  left: 100%;
+  transition: transform 0.5s ease-in-out; 
+}
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  left: 0;
+  animation: none;
+}
+.button-container {
+  display: flex;
+  width: 80vw;
+  margin-left: 10vw;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.phone-button {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.2em;
+  gap: 10px;
+  background-color: #ff9913;
+  border: none;
+  color: #000;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.portfolio-button1 {
+  background-color:#154c79;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: none;
+  color: #fff;
+  padding: 15px 20px;
+  margin: 10px 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    margin-top: 10px;
+  }
+  .slider h1{
+    padding-right: 15vw;
+    font-size: 2.5rem;
+  }
+  .slider p {
+    text-align: left;
+    padding: 0 10vw;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 30px;
+    align-items: center;
+
+  }
+  .phone-button {
+    margin-top: 0px;
+    width: 300px;
+  }
+  .portfolio-button1 {
+    margin: 0px 10px;
+    padding: 20px 10px;
+    width: 300px;
+  }
+  
+}
+
+@media screen and (min-width: 1024px){
+  .slider {
+    letter-spacing: 3px;
+    line-height: 40px;
+  }
+  .slide h1{
+    text-align: center;
+  }
+  .badge{
+    margin-left: 10vw;
+    padding-top: 20px;
+    max-width: 600px;
+    padding-left: 95px;
+  }
+}
